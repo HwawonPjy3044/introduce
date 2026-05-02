@@ -123,3 +123,29 @@ window.addEventListener('scroll', () => {
         heroBg.style.transform = `translateY(${scrolled * 0.3}px)`;
     }
 });
+
+// Change hero message on button click
+const messages = [
+    "오늘도 해냈어요,",
+    "조금씩 나아지고 있어요.",
+    "이대로 쭉 가봅시다."
+];
+let currentMsgIndex = 0;
+
+const changeMsgBtn = document.getElementById('change-msg-btn');
+const heroMessage = document.getElementById('hero-message');
+
+if (changeMsgBtn && heroMessage) {
+    heroMessage.style.transition = 'opacity 0.3s ease';
+    
+    changeMsgBtn.addEventListener('click', () => {
+        heroMessage.style.opacity = '0';
+        
+        setTimeout(() => {
+            heroMessage.textContent = messages[currentMsgIndex];
+            heroMessage.style.opacity = '1';
+            
+            currentMsgIndex = (currentMsgIndex + 1) % messages.length;
+        }, 300);
+    });
+}
