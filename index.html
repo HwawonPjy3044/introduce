@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나를 소개합니다 | 포트폴리오</title>
+    <meta name="description" content="고급스러운 현대적 디자인의 자기소개 페이지입니다.">
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="particle-canvas" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 0;"></canvas>
+    <nav class="nav">
+        <div class="logo">PORTFOLIO</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <img src="bg.png" alt="Background" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <h1>나를 소개합니다.</h1>
+        <p>혁신적인 디자인과 정교한 기술을 통해 더 나은 세상을 만들어가는 개발자이자 디자이너입니다.</p>
+        
+        <div class="scroll-indicator">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+            </svg>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="about" class="card">
+            <h2>About Me</h2>
+            <p style="margin-top: 20px; color: var(--text-secondary);">
+                창의적인 문제 해결 능력을 바탕으로 사용자에게 최상의 경험을 제공하는 것을 목표로 합니다. 
+                기술의 경계를 넓히고 새로운 가능성을 탐구하는 것을 즐깁니다.
+            </p>
+        </section>
+
+        <section id="skills" style="margin-top: 50px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div class="card">
+                    <h3 style="background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Design</h3>
+                    <p style="color: var(--text-secondary);">UX/UI Design, Visual Identity, Motion Graphics</p>
+                </div>
+                <div class="card">
+                    <h3 style="background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Development</h3>
+                    <p style="color: var(--text-secondary);">Frontend, Backend, System Architecture</p>
+                </div>
+                <div class="card">
+                    <h3 style="background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Strategy</h3>
+                    <p style="color: var(--text-secondary);">Product Strategy, Market Analysis, Growth Hacking</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" style="padding: 50px; text-align: center; border-top: 1px solid var(--glass-border);">
+        <p style="color: var(--text-secondary);">&copy; 2026 Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
